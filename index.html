@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resume Generator Pro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <!-- LOGIN -->
+    <div id="loginPage">
+
+        <!-- Welcome Text -->
+        <!-- Welcome Text -->
+        <div class="welcome-text">
+            <h1>Welcome to our Website</h1>
+            <h2 id="animatedText"></h2>
+        </div>
+
+        <div class="login-box">
+            <button class="skip" onclick="enterSite()">✕</button>
+            <h2>User Login</h2>
+
+            <input id="loginEmail" placeholder="Email">
+            <input id="loginPassword" placeholder="Password" type="password">
+
+            <p id="loginError" style="color:red; font-size:14px;"></p>
+
+            <button class="primary" onclick="checkLogin()">Login</button>
+
+            <p class="login-note">
+                Please login or click ❌ to skip
+            </p>
+        </div>
+
+    </div>
+    <!-- NAVBAR -->
+    <nav id="nav">
+        <div class="logo">ResumePro</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div>
+            <h1>Create Professional Resume</h1>
+            <span id="typed"></span><br>
+            <button class="start-btn" onclick="showResumeForm()">Create Resume</button>
+        </div>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    </section>
+
+
+
+    <!-- ABOUT -->
+    <div class="section" id="about">
+        <h2>About Resume Generator</h2>
+        <p>
+            Our Resume Generator helps users create professional, job-ready resumes in minutes. With easy templates and
+            guided inputs, anyone can build a strong resume without design skills. The platform is fast, simple, and
+            beginner-friendly. Our goal is to make resume building stress-free and effective.
+        </p><br>
+        <p>
+            This website is designed and developed by
+            <strong>Sara, Reshma, and Shaista</strong>.
+        </p>
+    </div>
+
+    <!-- RESUME FORM -->
+    <div class="section" id="resume">
+        <h2>Resume Form</h2>
+        <br>
+
+
+
+        <!-- Profile Photo Label -->
+        <div class="grid">
+
+            <!-- Profile Photo -->
+            <label class="full"><b>Profile Photo</b></label>
+            <input type="file" id="photo" accept="image/*" class="full">
+
+            <input id="name" placeholder="Full Name">
+            <input id="title" placeholder="Job Title">
+
+            <label class="full"><b>Contact Details</b></label>
+            <input id="address" placeholder="Address">
+            <input id="phone" placeholder="Phone Number">
+            <input id="email" placeholder="Email">
+
+            <textarea id="summary" placeholder="Profile Summary(max 300 words)" class="full" maxlength="300"></textarea>
+            <p id="summaryWarning" style="color: red;" font-size:14px;"></p>
+            <!-- SKILLS -->
+            <label class="full"><b>Skills</b></label>
+            <div id="skillsContainer" class="full"></div>
+            <input type="text" id="skillInput" placeholder="Enter Skill" class="full">
+            <button type="button" onclick="addSkill()" class="full">Add Skill</button>
+
+            <!-- LANGUAGES -->
+            <label class="full"><b>Languages</b></label>
+            <div id="langContainer" class="full"></div>
+            <input type="text" id="langInput" placeholder="Enter Language" class="full">
+            <button type="button" onclick="addLanguage()" class="full">Add Language</button>
+
+            <textarea id="edu" placeholder="Education" class="full"></textarea>
+            <textarea id="exp" placeholder="Experience(max 300 words)" class="full" maxlength="300"></textarea>
+            <p id="expWarning" style="color: red;" font-size:14px;"></p>
+
+            <label>Hobbies</label>
+            <textarea name="hobbies" placeholder="Enter hobbies "></textarea>
+
+            <label>Projects</label>
+            <textarea name="projects" placeholder="Enter projects"></textarea>
+
+            <label>Strengths</label>
+            <textarea name="strengths" placeholder="Enter strengths"></textarea>
+
+
+            <select id="tpl" class="full">
+                <option value="1">Template 1 (With Photo)</option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- PREVIEW -->
+        <div class="section" id="preview"></div>
+
+
+        <div class="top-buttons">
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section" id="contact">
+            <h2>Contact Us</h2>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <h3>Contact Details</h3>
+                    <p>📍 nanded, India</p>
+                    <p>📞 +91 98765 432108</p>
+                    <p>✉️ resumepro@gmail.com</p>
+                </div>
+
+                <div>
+                    <input id="contactName" placeholder="Full Name">
+                    <input id="contactEmail" placeholder="Email">
+                    <textarea id="contactMessage" placeholder="Message"></textarea>
+
+                    <p id="contactStatus" style="font-size:14px;"></p>
+
+                    <button class="primary" onclick="sendMessage()">Send Message</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 ResumePro. All rights reserved.
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+        <script>
+            (function () {
+                emailjs.init("o-3uY-iz0oCTBn8uF");
+            })();
+        </script>
+
+
+        <!-- External JS -->
+        <script src="script.js"></script>
+
+
+</body>
+
+</html>
