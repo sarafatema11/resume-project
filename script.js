@@ -1,17 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
 
-    new Typed('#animatedText', {
-        strings: [
-            "Create Resume Easily",
-            "Build Professional CV",
-            "Get Hired Faster"
-        ],
-        typeSpeed: 60,
-        backSpeed: 30,
-        loop: true
-    });
+    if (document.querySelector("#animatedText")) {
+        new Typed('#animatedText', {
+            strings: [
+                "Create Resume Easily",
+                "Build Professional CV",
+                "Get Hired Faster"
+            ],
+            typeSpeed: 60,
+            backSpeed: 30,
+            loop: true
+        });
+    }
 
 });
+
 
 
 function checkLogin() {
