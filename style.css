@@ -298,9 +298,7 @@ footer {
 }
 /* ===== MOBILE FIX PACK ===== */
 
-.grid{
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
+
 
 /* login mobile layout */
 @media(max-width:700px){
