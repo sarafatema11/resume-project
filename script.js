@@ -15,8 +15,6 @@ window.addEventListener("load", function () {
 
 });
 
-
-
 function checkLogin() {
 
     let email = document.getElementById("loginEmail").value.trim();
@@ -137,8 +135,6 @@ function generateResume() {
     collectData();
 }
 
-
-
 function sendMessage() {
 
     let name = document.getElementById("contactName").value.trim();
@@ -170,7 +166,6 @@ function sendMessage() {
 }
 
 
-
 function limitLines(textareaId, maxLines) {
     const textarea = document.getElementById(textareaId);
     textarea.addEventListener('input', function () {
@@ -188,8 +183,6 @@ limitLines('summary', 3);
 
 // Limit Experience to 7 lines
 limitLines('exp', 5);
-
-
 
 
 // Word limit enforcement for Profile Summary
