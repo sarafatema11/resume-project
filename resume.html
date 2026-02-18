@@ -16,7 +16,7 @@
             min-height: 297mm;
             margin: auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            box-shadow: none;  
         }
 
         body {
@@ -30,7 +30,11 @@
             grid-template-columns: 30% 70%;
             width: 100%;
             min-height: 297mm;
-        }
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+
 
 
 
@@ -237,11 +241,15 @@
   const opt = {
     margin: 0,
     filename: "My_Resume.pdf",
-    image: { type: "jpeg", quality: 1 },
-    html2canvas: {
-      scale: 1,
-      scrollY: 0
-    },
+   image: { type: "png", quality: 1 },
+
+   html2canvas: {
+  scale: 1,
+  scrollY: 0,
+  backgroundColor: "#ffffff",
+  letterRendering: true
+},
+
     jsPDF: {
       unit: "mm",
       format: "a4",
