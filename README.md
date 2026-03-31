@@ -33,9 +33,9 @@ This application allows users to enter their personal, educational, and professi
 
 ## 👩‍💻 Authors
 
-* Reshma Banu Mohammad Arif Memon
-* Shaista Tarannum Mohd Javeed Hussain
 * Sara Fatema Hameed Sharif
+*  Reshma Banu Mohammad Arif Memon
+* Shaista Tarannum Mohd Javeed Hussain
 
 ## 🏫 Institution
 
